@@ -2,7 +2,7 @@
 #   in the very near future. So this will act as a "copy-and-paste" style of repository.  Bear with me please. 
 
 rm(list=ls())
-get(wd)
+getwd()
 
 setwd("/Users/ryancookd")
 data <- read.table("~/Desktop/flag.data.txt", sep=",", header=F)
