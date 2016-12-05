@@ -4,5 +4,5 @@
 rm(list=ls())
 getwd()
 
-setwd("/Users/ryancookd")
+setwd("/Users/ryancook")
 data <- read.table("~/Desktop/flag.data.txt", sep=",", header=F)
