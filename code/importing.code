@@ -1,0 +1,8 @@
+# below is the code I have so far.  I am using this repository as a save of my work because my computer is wonky and may crash
+#   in the very near future. So this will act as a "copy-and-paste" style of repository.  Bear with me please. 
+
+rm(list=ls())
+get(wd)
+
+setwd("/Users/ryancookd")
+data <- read.table("~/Desktop/flag.data.txt", sep=",", header=F)
