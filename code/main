@@ -1,0 +1,44 @@
+# below is the main code
+
+# seperating from the data the christian countries and the flags with crosses on them
+> rm(linst=ls())
+> data <- read.table("~/Desktop/flag.data.txt", sep=",", header=F)
+> attach(data)
+> cross <- (V20 >= 1)
+> christian <- (V7 <=1)
+> detach(data)
+
+# seperating colors
+> attach(data)
+> red <- (V11 == 1)
+> blue <- (V13 == 1)
+> white <- (V15 == 1)
+
+
+# plot the relation between croses on flags being in christian countries
+> boxplot(christian,cross)
+
+# regressions
+> LMC <-lm(cross~christian)
+> LMC
+> summary(LMC)
+
+# log regressions (most important to this data)
+> glm.cc <- glm(christian~cross, binomial("logit"))
+> summary(glm.cc)
+
+> glm.red.christ <- glm(christian~red, binomial("logit"))
+> glm.blue.christ <- glm(christian~blue, binomial("logit"))
+> glm.white.christ <- glm(christian~white, binomial("logit"))
+> glm.red.white.blue.christ <- glm(christian~red+white+blue, binomial("logit"))
+
+# summary(s)
+> summary(glm.red.christ)
+> summary(glm.blue.christ)
+> summary(glm.white.christ)
+> summary(glm.red.white.blue.christ)
+
+
+
+
+
