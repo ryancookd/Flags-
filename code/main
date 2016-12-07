@@ -38,6 +38,10 @@
 > summary(glm.white.christ)
 > summary(glm.red.white.blue.christ)
 
+# functions
+> p.logOdds <- function(x)[(exp(x)/(1+exp(x)))}
+
+
 
 
 
