@@ -49,10 +49,10 @@
 > glm.gold.muslim <- glm(muslim~gold, binomial("logit"))
 
 # summary(s)
-> summary(glm.red.christ)
-> summary(glm.blue.christ)
-> summary(glm.white.christ)
-> summary(glm.red.white.blue.christ)
+> summary(glm.red.christ) # 58% 
+> summary(glm.blue.christ) # 81%
+> summary(glm.white.christ) # 65%
+> summary(glm.red.white.blue.christ) # 82%
 
 # functions
 > p.logOdds <- function(x)[(exp(x)/(1+exp(x)))}
