@@ -48,11 +48,20 @@
 > glm.crescent.muslim <- glm(muslim~crescent, binomial("logit"))
 > glm.gold.muslim <- glm(muslim~gold, binomial("logit"))
 
-# summary(s)
+# summaries for Christian Countries
 > summary(glm.red.christ) # 58% 
 > summary(glm.blue.christ) # 81%
 > summary(glm.white.christ) # 65%
 > summary(glm.red.white.blue.christ) # 82%
+> summary(glm.gold.christ) # 62%
+> summary(glm.stripes1.christ) # 58%
+> summary(glm.stripes2.christ) # 63%
+> summary(glm.stripes3.christ) # 64%
+> summary(glm.stripes4.christ) # 67%
+
+# summaries for Muslim Countries
+> summary(glm.gold.muslim) # 79%
+> summary(glm.red.muslim) # 56%
 
 # functions
 > p.logOdds <- function(x)[(exp(x)/(1+exp(x)))}
