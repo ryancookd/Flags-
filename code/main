@@ -31,14 +31,22 @@
 > LMC
 > summary(LMC)
 
-# log regressions (most important to this data)
+# log regressions with probabilities (most important to this data)
 > glm.cc <- glm(christian~cross, binomial("logit"))
 > summary(glm.cc)
+    # if a cross is on a flag, the country is 97% likely to be christian
+> summary(glm.crescent.muslim)
+    # if a crescent is on the flag, the country is 93% likely to be muslim
+
 
 > glm.red.christ <- glm(christian~red, binomial("logit"))
 > glm.blue.christ <- glm(christian~blue, binomial("logit"))
 > glm.white.christ <- glm(christian~white, binomial("logit"))
 > glm.red.white.blue.christ <- glm(christian~red+white+blue, binomial("logit"))
+
+#glm muslim colors
+> glm.crescent.muslim <- glm(muslim~crescent, binomial("logit"))
+> glm.gold.muslim <- glm(muslim~gold, binomial("logit"))
 
 # summary(s)
 > summary(glm.red.christ)
