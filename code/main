@@ -8,11 +8,19 @@
 > christian <- (V7 <=1)
 > detach(data)
 
-# seperating colors
+# seperating colors and information
 > attach(data)
 > red <- (V11 == 1)
 > blue <- (V13 == 1)
 > white <- (V15 == 1)
+> muslim <- (V7 == 2)
+> gold <- (V14 == 1)
+> black <- (V16 == 1)
+> orange <- (V17 == 1)
+> stripes <- (V9 >= 3)
+> bars <- (V8 >= 3)
+> crescent <- (V24 == 1)
+> triangle <- (V25 == 1)
 
 
 # plot the relation between croses on flags being in christian countries
