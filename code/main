@@ -21,7 +21,11 @@
 > bars <- (V8 >= 3)
 > crescent <- (V24 == 1)
 > triangle <- (V25 == 1)
-
+> bars1 <- (V8 == 1)
+> bars2 <- (V8 == 2)
+> bars3 <- (V8 == 3)
+> bars4 <- (V8 > 3)
+> stars <- (V23 == 1)
 
 # plot the relation between croses on flags being in christian countries
 > boxplot(christian,cross)
@@ -58,10 +62,12 @@
 > summary(glm.stripes2.christ) # 63%
 > summary(glm.stripes3.christ) # 64%
 > summary(glm.stripes4.christ) # 67%
+> summary(glm.christ.stars)
 
 # summaries for Muslim Countries
 > summary(glm.gold.muslim) # 79%
 > summary(glm.red.muslim) # 56%
+> summary(glm.black.muslim)
 
 # functions
 > p.logOdds <- function(x)[(exp(x)/(1+exp(x)))}
